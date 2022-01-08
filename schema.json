@@ -107,21 +107,6 @@
           }
         }
       ],
-      "get": {
-        "operationId": "getBook",
-        "description": "Returns the book associated with the given bookId",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/BookResponse"
-          },
-          "400": {
-            "$ref": "#/components/responses/ErrorResponse"
-          },
-          "500": {
-            "$ref": "#/components/responses/ErrorResponse"
-          }
-        }
-      },
       "put": {
         "operationId": "updateBook",
         "description": "Updates the book associated with the given bookId",

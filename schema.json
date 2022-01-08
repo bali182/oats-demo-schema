@@ -152,7 +152,7 @@
         }
       },
       "post": {
-        "operationId": "createBook",
+        "operationId": "addBook",
         "description": "Creates a new book based on the request body. The id field can be ommited (will be ignored)",
         "requestBody": {
           "$ref": "#/components/requestBodies/BookRequestBody"

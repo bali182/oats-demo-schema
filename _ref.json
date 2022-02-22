@@ -1,0 +1,21 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Object schemas",
+    "description": "This file contains named object schemas",
+    "version": "1.0"
+  },
+  "components": {
+    "schemas": {
+      "ObjectWithReferenceFieldsType": {
+        "type": "object",
+        "properties": {
+          "referenceField": {
+            "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"
+          }
+        }
+      }
+    }
+  },
+  "paths": {}
+}

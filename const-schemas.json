@@ -1,0 +1,68 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Const schemas",
+    "description": "This file contains named schemas with const (literal) values",
+    "version": "1.0"
+  },
+  "components": {
+    "schemas": {
+      "StringLiteralType": {
+        "const": "I'm a constant string"
+      },
+      "NumberLiteralType": {
+        "const": 125
+      },
+      "BooleanLiteralType": {
+        "const": true
+      },
+      "NullLiteralType": {
+        "const": null
+      },
+      "ArrayLiteralType": {
+        "const": [
+          "string value",
+          42,
+          false,
+          null,
+          {
+            "key": 10
+          },
+          [
+            3,
+            false,
+            "hello"
+          ]
+        ]
+      },
+      "SimpleObjectLiteralType": {
+        "const": {
+          "s": "I'm a string",
+          "n": 10,
+          "b": true
+        }
+      },
+      "NestedObjectLiteralType": {
+        "const": {
+          "obj": {
+            "I": {
+              "am": {
+                "deeply": {
+                  "nested": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "QuotedKeysObjectLiteralType": {
+        "const": {
+          "has-dashes": true,
+          "has space": true,
+          "has .`/!+^ chars": true
+        }
+      }
+    }
+  },
+  "paths": {}
+}

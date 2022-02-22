@@ -1,0 +1,79 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Object schemas",
+    "description": "This file contains named object schemas",
+    "version": "1.0"
+  },
+  "components": {
+    "schemas": {
+      "ObjectWithPrimitiveFieldsType": {
+        "type": "object",
+        "properties": {
+          "stringField": {
+            "type": "string"
+          },
+          "numberField": {
+            "type": "number"
+          },
+          "booleanField": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ObjectWithNestedTypeFieldsType": {
+        "type": "object",
+        "properties": {
+          "arrayField": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "objectField": {
+            "type": "object",
+            "properties": {
+              "nestedField": {
+                "type": "string"
+              }
+            }
+          },
+          "tupleField": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              }
+            ]
+          },
+          "enumField": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        }
+      },
+      "ObjectWithReferenceFieldsType": {
+        "type": "object",
+        "properties": {
+          "referenceField": {
+            "$ref": "reference-target-schema.json/#/components/schemas/ReferenceTarget"
+          },
+          "referenceArrayField": {
+            "type": "array",
+            "items": {
+              "$ref": "reference-target-schema.json/#/components/schemas/ReferenceTarget"
+            }
+          }
+        }
+      }
+    }
+  },
+  "paths": {}
+}

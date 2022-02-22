@@ -1,0 +1,88 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Enum schemas",
+    "description": "This file contains named enum schemas",
+    "version": "1.0"
+  },
+  "components": {
+    "schemas": {
+      "StringEnumType": {
+        "enum": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "NumberEnumType": {
+        "enum": [
+          1,
+          2,
+          3
+        ]
+      },
+      "BooleanEnumType": {
+        "enum": [
+          true,
+          false
+        ]
+      },
+      "ArrayEnumType": {
+        "enum": [
+          [
+            "A",
+            "B",
+            "C"
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            true,
+            false
+          ]
+        ]
+      },
+      "ObjectEnumType": {
+        "enum": [
+          {
+            "str": "hi"
+          },
+          {
+            "num": 121
+          },
+          {
+            "bool": true
+          },
+          {
+            "null": null
+          },
+          {
+            "has-dashes": true,
+            "has space": true,
+            "has .`/!+^ chars": true
+          }
+        ]
+      },
+      "MixedEnumType": {
+        "enum": [
+          "A",
+          121,
+          true,
+          null,
+          [
+            "B",
+            2,
+            false
+          ],
+          {
+            "obj": true
+          }
+        ]
+      }
+    }
+  },
+  "paths": {}
+}

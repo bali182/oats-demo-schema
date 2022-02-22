@@ -1,0 +1,21 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Reference Target",
+    "description": "This file contains a single schema, that will be commonly used as reference target",
+    "version": "1.0"
+  },
+  "components": {
+    "schemas": {
+      "ReferenceTarget": {
+        "type": "object",
+        "properties": {
+          "referenceTarget": {
+            "const": true
+          }
+        }
+      }
+    }
+  },
+  "paths": {}
+}

@@ -63,12 +63,12 @@
         "type": "object",
         "properties": {
           "referenceField": {
-            "$ref": "reference-target-schema.json/#/components/schemas/ReferenceTarget"
+            "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"
           },
           "referenceArrayField": {
             "type": "array",
             "items": {
-              "$ref": "reference-target-schema.json/#/components/schemas/ReferenceTarget"
+              "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"
             }
           }
         }

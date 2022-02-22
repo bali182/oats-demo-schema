@@ -35,7 +35,7 @@
             }
           },
           {
-            "$ref": "reference-target-schema.json/#/components/schemas/ReferenceTarget"
+            "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"
           }
         ]
       },

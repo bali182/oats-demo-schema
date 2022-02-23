@@ -8,6 +8,25 @@
   "components": {
     "schemas": {
       "ObjectWithPrimitiveFieldsType": {
+        "required": [
+          "stringField",
+          "numberField",
+          "booleanField"
+        ],
+        "type": "object",
+        "properties": {
+          "stringField": {
+            "type": "string"
+          },
+          "numberField": {
+            "type": "number"
+          },
+          "booleanField": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ObjectWithOptionalPrimitiveFieldsType": {
         "type": "object",
         "properties": {
           "stringField": {
@@ -23,6 +42,12 @@
       },
       "ObjectWithNestedTypeFieldsType": {
         "type": "object",
+        "required": [
+          "arrayField",
+          "objectField",
+          "tupleField",
+          "enumField"
+        ],
         "properties": {
           "arrayField": {
             "type": "array",
@@ -61,6 +86,10 @@
       },
       "ObjectWithReferenceFieldsType": {
         "type": "object",
+        "required": [
+          "referenceField",
+          "referenceArrayField"
+        ],
         "properties": {
           "referenceField": {
             "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"

@@ -7,50 +7,31 @@
   },
   "components": {
     "schemas": {
-      "PrimitiveUnionType": {
-        "oneOf": [
-          {
-            "type": "string"
-          },
-          {
-            "type": "number"
-          },
-          {
-            "type": "boolean"
+      "TopLevelUnionType": {
+        "discriminator": {
+          "propertyName": "topLevelType",
+          "mapping": {
+            "ObjectRefLeaf1": "#/components/schemas/ObjectRefLeaf1",
+            "MidLevelUnionType": "#/components/schemas/MidLevelUnionType"
           }
-        ]
-      },
-      "InlineObjectUnionType": {
-        "oneOf": [
-          {
-            "type": "object",
-            "properties": {
-              "foo": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "type": "object",
-            "properties": {
-              "bar": {
-                "type": "number"
-              }
-            }
-          }
-        ]
-      },
-      "ObjectRefUnionType": {
+        },
         "oneOf": [
           {
             "$ref": "#/components/schemas/ObjectRefLeaf1"
           },
           {
-            "$ref": "#/components/schemas/ObjectRefMid"
+            "$ref": "#/components/schemas/MidLevelUnionType"
           }
         ]
       },
-      "ObjectRefMid": {
+      "MidLevelUnionType": {
+        "discriminator": {
+          "propertyName": "midLevelType",
+          "mapping": {
+            "ObjectRefLeaf1": "#/components/schemas/ObjectRefLeaf2",
+            "ObjectRefLeaf3": "#/components/schemas/ObjectRefLeaf3"
+          }
+        },
         "oneOf": [
           {
             "$ref": "#/components/schemas/ObjectRefLeaf2"
@@ -63,9 +44,6 @@
       "ObjectRefLeaf1": {
         "type": "object",
         "properties": {
-          "type": {
-            "const": "ObjectRefLeaf1"
-          },
           "foo": {
             "type": "string"
           }
@@ -74,9 +52,6 @@
       "ObjectRefLeaf2": {
         "type": "object",
         "properties": {
-          "type": {
-            "const": "ObjectRefLeaf3"
-          },
           "bar": {
             "type": "string"
           }
@@ -85,9 +60,6 @@
       "ObjectRefLeaf3": {
         "type": "object",
         "properties": {
-          "type": {
-            "const": "ObjectRefLeaf3"
-          },
           "foobar": {
             "type": "string"
           }

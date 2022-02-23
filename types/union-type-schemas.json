@@ -1,0 +1,117 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Object schemas",
+    "description": "This file contains named union types",
+    "version": "1.0"
+  },
+  "components": {
+    "schemas": {
+      "PrimitiveUnionType": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "boolean"
+          }
+        ]
+      },
+      "InlineObjectUnionType": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": [
+              "foo"
+            ],
+            "properties": {
+              "foo": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "bar"
+            ],
+            "properties": {
+              "bar": {
+                "type": "number"
+              }
+            }
+          }
+        ]
+      },
+      "ObjectRefUnionType": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ObjectRefLeaf1"
+          },
+          {
+            "$ref": "#/components/schemas/ObjectRefMid"
+          }
+        ]
+      },
+      "ObjectRefMid": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/ObjectRefLeaf2"
+          },
+          {
+            "$ref": "#/components/schemas/ObjectRefLeaf3"
+          }
+        ]
+      },
+      "ObjectRefLeaf1": {
+        "type": "object",
+        "required": [
+          "type",
+          "foo"
+        ],
+        "properties": {
+          "type": {
+            "const": "ObjectRefLeaf1"
+          },
+          "foo": {
+            "type": "string"
+          }
+        }
+      },
+      "ObjectRefLeaf2": {
+        "type": "object",
+        "required": [
+          "type",
+          "bar"
+        ],
+        "properties": {
+          "type": {
+            "const": "ObjectRefLeaf3"
+          },
+          "bar": {
+            "type": "string"
+          }
+        }
+      },
+      "ObjectRefLeaf3": {
+        "type": "object",
+        "required": [
+          "type",
+          "foobar"
+        ],
+        "properties": {
+          "type": {
+            "const": "ObjectRefLeaf3"
+          },
+          "foobar": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "paths": {}
+}

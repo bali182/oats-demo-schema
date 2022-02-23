@@ -9,7 +9,7 @@
     "schemas": {
       "TupleType": {
         "type": "array",
-        "minItems": 5,
+        "minItems": 6,
         "prefixItems": [
           {
             "type": "string"

@@ -1,0 +1,45 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "References",
+    "description": "This file remote refs",
+    "version": "1.0"
+  },
+  "components": {
+    "schemas": {
+      "RemoteRefType": {
+        "$ref": "remote-ref-schemas.json#/components/schemas/TypeWithRemoteRefField"
+      },
+      "InlineRefType": {
+        "$ref": "#/components/schemas/InlineRefTarget"
+      },
+      "TypeWithRefOfRemoteRef": {
+        "type": "object",
+        "required": [
+          "referenceField",
+          "referenceArrayField"
+        ],
+        "properties": {
+          "referenceField": {
+            "$ref": "remote-ref-schemas.json#/components/schemas/TypeWithRemoteRefField"
+          },
+          "referenceArrayField": {
+            "type": "array",
+            "items": {
+              "$ref": "remote-ref-schemas.json#/components/schemas/TypeWithRemoteRefField"
+            }
+          }
+        }
+      },
+      "InlineRefTarget": {
+        "type": "object",
+        "properties": {
+          "foo": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "paths": {}
+}

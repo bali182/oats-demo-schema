@@ -107,7 +107,22 @@
           }
         }
       ],
-      "put": {
+      "get": {
+        "operationId": "getBook",
+        "description": "Returns the book associated with the given bookId",
+        "responses": {
+          "200": {
+            "$ref": "#/components/responses/BookResponse"
+          },
+          "400": {
+            "$ref": "#/components/responses/ErrorResponse"
+          },
+          "500": {
+            "$ref": "#/components/responses/ErrorResponse"
+          }
+        }
+      },
+      "patch": {
         "operationId": "updateBook",
         "description": "Updates the book associated with the given bookId",
         "requestBody": {
@@ -152,7 +167,7 @@
         }
       },
       "post": {
-        "operationId": "addBook",
+        "operationId": "createBook",
         "description": "Creates a new book based on the request body. The id field can be ommited (will be ignored)",
         "requestBody": {
           "$ref": "#/components/requestBodies/BookRequestBody"

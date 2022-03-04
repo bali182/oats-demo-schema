@@ -9,7 +9,7 @@
     "schemas": {
       "TopLevelUnionType": {
         "discriminator": {
-          "propertyName": "topLevelType",
+          "propertyName": "type",
           "mapping": {
             "ObjectRefLeaf1": "#/components/schemas/ObjectRefLeaf1",
             "MidLevelUnionType": "#/components/schemas/MidLevelUnionType"
@@ -26,9 +26,9 @@
       },
       "MidLevelUnionType": {
         "discriminator": {
-          "propertyName": "midLevelType",
+          "propertyName": "type",
           "mapping": {
-            "ObjectRefLeaf1": "#/components/schemas/ObjectRefLeaf2",
+            "ObjectRefLeaf2": "#/components/schemas/ObjectRefLeaf2",
             "ObjectRefLeaf3": "#/components/schemas/ObjectRefLeaf3"
           }
         },

@@ -89,7 +89,7 @@
         ],
         "properties": {
           "type": {
-            "const": "ObjectRefLeaf3"
+            "const": "ObjectRefLeaf2"
           },
           "bar": {
             "type": "string"

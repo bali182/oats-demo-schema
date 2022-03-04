@@ -11,13 +11,13 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "ObjectRefLeaf1": "#/components/schemas/ObjectRefLeaf1",
+            "LeafType1": "#/components/schemas/LeafType1",
             "MidLevelUnionType": "#/components/schemas/MidLevelUnionType"
           }
         },
         "oneOf": [
           {
-            "$ref": "#/components/schemas/ObjectRefLeaf1"
+            "$ref": "#/components/schemas/LeafType1"
           },
           {
             "$ref": "#/components/schemas/MidLevelUnionType"
@@ -28,37 +28,46 @@
         "discriminator": {
           "propertyName": "type",
           "mapping": {
-            "ObjectRefLeaf2": "#/components/schemas/ObjectRefLeaf2",
-            "ObjectRefLeaf3": "#/components/schemas/ObjectRefLeaf3"
+            "LeafType2": "#/components/schemas/LeafType2",
+            "LeafType3": "#/components/schemas/LeafType3"
           }
         },
         "oneOf": [
           {
-            "$ref": "#/components/schemas/ObjectRefLeaf2"
+            "$ref": "#/components/schemas/LeafType2"
           },
           {
-            "$ref": "#/components/schemas/ObjectRefLeaf3"
+            "$ref": "#/components/schemas/LeafType3"
           }
         ]
       },
-      "ObjectRefLeaf1": {
+      "LeafType1": {
         "type": "object",
+        "required": [
+          "foo"
+        ],
         "properties": {
           "foo": {
             "type": "string"
           }
         }
       },
-      "ObjectRefLeaf2": {
+      "LeafType2": {
         "type": "object",
+        "required": [
+          "bar"
+        ],
         "properties": {
           "bar": {
             "type": "string"
           }
         }
       },
-      "ObjectRefLeaf3": {
+      "LeafType3": {
         "type": "object",
+        "required": [
+          "foobar"
+        ],
         "properties": {
           "foobar": {
             "type": "string"

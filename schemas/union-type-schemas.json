@@ -46,27 +46,27 @@
           }
         ]
       },
-      "ObjectRefUnionType": {
+      "TopLevelUnionType": {
         "oneOf": [
           {
-            "$ref": "#/components/schemas/ObjectRefLeaf1"
+            "$ref": "#/components/schemas/LeafType1"
           },
           {
-            "$ref": "#/components/schemas/ObjectRefMid"
+            "$ref": "#/components/schemas/MidLevelUnionType"
           }
         ]
       },
-      "ObjectRefMid": {
+      "MidLevelUnionType": {
         "oneOf": [
           {
-            "$ref": "#/components/schemas/ObjectRefLeaf2"
+            "$ref": "#/components/schemas/LeafType2"
           },
           {
-            "$ref": "#/components/schemas/ObjectRefLeaf3"
+            "$ref": "#/components/schemas/LeafType3"
           }
         ]
       },
-      "ObjectRefLeaf1": {
+      "LeafType1": {
         "type": "object",
         "required": [
           "type",
@@ -74,14 +74,14 @@
         ],
         "properties": {
           "type": {
-            "const": "ObjectRefLeaf1"
+            "const": "LeafType1"
           },
           "foo": {
             "type": "string"
           }
         }
       },
-      "ObjectRefLeaf2": {
+      "LeafType2": {
         "type": "object",
         "required": [
           "type",
@@ -89,14 +89,14 @@
         ],
         "properties": {
           "type": {
-            "const": "ObjectRefLeaf2"
+            "const": "LeafType2"
           },
           "bar": {
             "type": "string"
           }
         }
       },
-      "ObjectRefLeaf3": {
+      "LeafType3": {
         "type": "object",
         "required": [
           "type",
@@ -104,7 +104,7 @@
         ],
         "properties": {
           "type": {
-            "const": "ObjectRefLeaf3"
+            "const": "LeafType3"
           },
           "foobar": {
             "type": "string"

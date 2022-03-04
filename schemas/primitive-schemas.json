@@ -14,7 +14,7 @@
         "type": "number"
       },
       "BooleanType": {
-        "type": "number"
+        "type": "boolean"
       }
     }
   },

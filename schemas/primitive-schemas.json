@@ -8,6 +8,7 @@
   "components": {
     "schemas": {
       "StringType": {
+        "description": "This is a named string schema",
         "type": "string"
       },
       "NumberType": {

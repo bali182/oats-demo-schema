@@ -1,0 +1,60 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Record schemas",
+    "description": "This file contains named record schemas",
+    "version": "1.0"
+  },
+  "components": {
+    "schemas": {
+      "StringRecordType": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      },
+      "NumberRecordType": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "number"
+        }
+      },
+      "BooleanRecordType": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "boolean"
+        }
+      },
+      "ArrayRecordType": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "ObjectRecordType": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "required": [
+            "foo"
+          ],
+          "properties": {
+            "foo": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "RefRecordType": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"
+        }
+      }
+    }
+  },
+  "paths": {}
+}

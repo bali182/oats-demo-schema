@@ -1,0 +1,35 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Ignored fields",
+    "description": "This file an object schema with some fields with the x-ignore property",
+    "version": "1.0"
+  },
+  "components": {
+    "schemas": {
+      "IgnoredFieldsType": {
+        "type": "object",
+        "properties": {
+          "regularProperty": {
+            "type": "string"
+          },
+          "ignoredArrayProperty": {
+            "type": "array",
+            "x-ignore": true,
+            "items": {
+              "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"
+            }
+          },
+          "ignoredArrayItemProperty": {
+            "type": "array",
+            "items": {
+              "x-ignore": true,
+              "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"
+            }
+          }
+        }
+      }
+    }
+  },
+  "paths": {}
+}

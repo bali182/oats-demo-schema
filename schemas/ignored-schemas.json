@@ -8,6 +8,10 @@
   "components": {
     "schemas": {
       "IgnoredFieldsType": {
+        "required": [
+          "type",
+          "ignored"
+        ],
         "type": "object",
         "properties": {
           "type": {

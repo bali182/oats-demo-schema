@@ -10,21 +10,14 @@
       "IgnoredFieldsType": {
         "type": "object",
         "properties": {
-          "regularProperty": {
-            "type": "string"
+          "type": {
+            "const": "discriminator-field"
           },
-          "ignoredArrayProperty": {
+          "ignored": {
             "type": "array",
             "x-ignore": true,
             "items": {
-              "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"
-            }
-          },
-          "ignoredArrayItemProperty": {
-            "type": "array",
-            "items": {
-              "x-ignore": true,
-              "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"
+              "type": "string"
             }
           }
         }

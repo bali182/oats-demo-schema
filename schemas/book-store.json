@@ -2,27 +2,13 @@
   "openapi": "3.0.0",
   "info": {
     "title": "BookStore",
-    "version": "1.0"
+    "version": "2.0"
   },
   "components": {
     "schemas": {
-      "BookType": {
-        "type": "string",
-        "enum": [
-          "paperback",
-          "digital",
-          "audio"
-        ]
-      },
       "Book": {
         "type": "object",
-        "required": [
-          "id",
-          "title",
-          "author",
-          "bookType",
-          "price"
-        ],
+        "required": ["id", "title", "author", "price"],
         "properties": {
           "id": {
             "type": "number"
@@ -36,9 +22,6 @@
           "description": {
             "type": "string"
           },
-          "bookType": {
-            "$ref": "#/components/schemas/BookType"
-          },
           "price": {
             "type": "number"
           }
@@ -46,107 +29,55 @@
       },
       "AppError": {
         "type": "object",
-        "required": [
-          "message",
-          "code"
-        ],
+        "required": ["message"],
         "properties": {
           "message": {
             "type": "string"
           }
         }
       }
-    },
-    "requestBodies": {
-      "BookRequestBody": {
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Book"
-            }
-          }
-        }
-      }
-    },
-    "responses": {
-      "BookResponse": {
-        "description": "A json response with a book",
-        "content": {
-          "application/json": {
-            "schema": {
-              "$ref": "#/components/schemas/Book"
-            }
-          }
-        }
-      },
-      "ErrorResponse": {
-        "description": "An error caused by the client",
-        "content": {
-          "application/json": {
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/AppError"
-              }
-            }
-          }
-        }
-      }
     }
   },
   "paths": {
-    "/books/{bookId}": {
-      "parameters": [
-        {
-          "in": "path",
-          "name": "bookId",
-          "description": "The id of the book",
-          "required": true,
-          "schema": {
-            "type": "number"
-          }
-        }
-      ],
-      "get": {
-        "operationId": "getBook",
-        "description": "Returns the book associated with the given bookId",
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/BookResponse"
-          },
-          "400": {
-            "$ref": "#/components/responses/ErrorResponse"
-          },
-          "500": {
-            "$ref": "#/components/responses/ErrorResponse"
-          }
-        }
-      },
-      "patch": {
-        "operationId": "updateBook",
-        "description": "Updates the book associated with the given bookId",
-        "requestBody": {
-          "$ref": "#/components/requestBodies/BookRequestBody"
-        },
-        "responses": {
-          "200": {
-            "$ref": "#/components/responses/BookResponse"
-          },
-          "400": {
-            "$ref": "#/components/responses/ErrorResponse"
-          },
-          "500": {
-            "$ref": "#/components/responses/ErrorResponse"
-          }
-        }
-      }
-    },
     "/books": {
       "get": {
         "operationId": "getBooks",
+        "description": "Returns a list of books, can be paginated",
+        "parameters": [
+          {
+            "name": "offset",
+            "style": "form",
+            "in": "query",
+            "description": "Parameter used for pagination, the index of the first record",
+            "required": false,
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "x-limit",
+            "style": "simple",
+            "in": "header",
+            "description": "Parameter used for pagination, the amount of records you need",
+            "required": false,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": "Returns all the books",
+            "description": "The book list",
+            "headers": {
+              "x-length": {
+                "style": "simple",
+                "description": "The number of records returned",
+                "required": true,
+                "schema": {
+                  "type": "number"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -159,28 +90,136 @@
             }
           },
           "400": {
-            "$ref": "#/components/responses/ErrorResponse"
+            "description": "An error caused by either the client",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AppError"
+                  }
+                }
+              }
+            }
           },
           "500": {
-            "$ref": "#/components/responses/ErrorResponse"
+            "description": "An error caused by either the server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AppError"
+                  }
+                }
+              }
+            }
           }
         }
       },
       "post": {
         "operationId": "createBook",
-        "description": "Creates a new book based on the request body. The id field can be ommited (will be ignored)",
+        "description": "Creates a new book based on the request body.",
         "requestBody": {
-          "$ref": "#/components/requestBodies/BookRequestBody"
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Book"
+              }
+            }
+          }
         },
         "responses": {
           "201": {
-            "$ref": "#/components/responses/BookResponse"
+            "description": "The book created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Book"
+                }
+              }
+            }
           },
           "400": {
-            "$ref": "#/components/responses/ErrorResponse"
+            "description": "An error caused by either the client",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AppError"
+                  }
+                }
+              }
+            }
           },
           "500": {
-            "$ref": "#/components/responses/ErrorResponse"
+            "description": "An error caused by either the server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AppError"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/books/{bookId}": {
+      "get": {
+        "operationId": "getBook",
+        "description": "Returns the book associated with the given bookId",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "bookId",
+            "description": "The id of the book",
+            "required": true,
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a book identified by it's id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Book"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "An error caused by either the client",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AppError"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An error caused by either the server",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AppError"
+                  }
+                }
+              }
+            }
           }
         }
       }

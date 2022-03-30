@@ -118,7 +118,7 @@
         }
       },
       "post": {
-        "operationId": "createBook",
+        "operationId": "addBook",
         "description": "Creates a new book based on the request body.",
         "requestBody": {
           "content": {

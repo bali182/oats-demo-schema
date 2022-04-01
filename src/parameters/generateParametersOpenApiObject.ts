@@ -118,6 +118,7 @@ function generateParameterOperationObject(input: ParameterGeneratorConfig): Oper
   const requestBody: RequestBodyObject | undefined =
     input.location === 'response-header'
       ? {
+          required: true,
           content: {
             'application/json': {
               schema: { $ref: `#/components/schemas/${getParameterSchemaName(input)}` },

@@ -1931,6 +1931,7 @@
         "description": "Endpoint for testing response-header parameters with simple serialization",
         "parameters": [],
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {

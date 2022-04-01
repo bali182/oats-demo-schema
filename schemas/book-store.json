@@ -121,6 +121,7 @@
         "operationId": "addBook",
         "description": "Creates a new book based on the request body.",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {

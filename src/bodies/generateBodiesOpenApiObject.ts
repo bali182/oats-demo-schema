@@ -20,6 +20,7 @@ function getPaths(): PathsObject {
         post: {
           operationId: camelCase(name),
           requestBody: {
+            required: true,
             content: {
               'application/json': {
                 schema,

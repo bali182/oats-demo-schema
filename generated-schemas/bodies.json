@@ -143,6 +143,7 @@
       "post": {
         "operationId": "str",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -179,6 +180,7 @@
       "post": {
         "operationId": "num",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -215,6 +217,7 @@
       "post": {
         "operationId": "enm",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -251,6 +254,7 @@
       "post": {
         "operationId": "bool",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -287,6 +291,7 @@
       "post": {
         "operationId": "primTuple",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -323,6 +328,7 @@
       "post": {
         "operationId": "optPrimTuple",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -359,6 +365,7 @@
       "post": {
         "operationId": "strArr",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -407,6 +414,7 @@
       "post": {
         "operationId": "numArr",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -455,6 +463,7 @@
       "post": {
         "operationId": "enmArr",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -503,6 +512,7 @@
       "post": {
         "operationId": "boolArr",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -551,6 +561,7 @@
       "post": {
         "operationId": "primObj",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -587,6 +598,7 @@
       "post": {
         "operationId": "arrObj",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -623,6 +635,7 @@
       "post": {
         "operationId": "nestedObj",
         "requestBody": {
+          "required": true,
           "content": {
             "application/json": {
               "schema": {

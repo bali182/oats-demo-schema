@@ -108,6 +108,23 @@ export const configs: ParameterGeneratorConfig[] = [
     ],
   },
   {
+    location: 'cookie',
+    style: 'form',
+    explodeValues: [true, false],
+    requiredValues: [true, false],
+    schemaTypes: [
+      'string',
+      'number',
+      'boolean',
+      'enum',
+      'string-array',
+      'number-array',
+      'boolean-array',
+      'enum-array',
+      'object',
+    ],
+  },
+  {
     location: 'response-header',
     style: 'simple',
     explodeValues: [true, false],

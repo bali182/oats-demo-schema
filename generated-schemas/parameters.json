@@ -1931,26 +1931,6 @@
         "description": "Endpoint for testing cookie parameters with form serialization",
         "parameters": [
           {
-            "name": "strExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "optStrExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": false,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "str",
             "in": "cookie",
             "style": "form",
@@ -1968,26 +1948,6 @@
             "required": false,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "numExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": true,
-            "schema": {
-              "type": "number"
-            }
-          },
-          {
-            "name": "optNumExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": false,
-            "schema": {
-              "type": "number"
             }
           },
           {
@@ -2011,26 +1971,6 @@
             }
           },
           {
-            "name": "boolExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": true,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
-            "name": "optBoolExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": false,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
             "name": "bool",
             "in": "cookie",
             "style": "form",
@@ -2051,26 +1991,6 @@
             }
           },
           {
-            "name": "enmExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/CommonEnumType"
-            }
-          },
-          {
-            "name": "optEnmExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/CommonEnumType"
-            }
-          },
-          {
             "name": "enm",
             "in": "cookie",
             "style": "form",
@@ -2088,254 +2008,6 @@
             "required": false,
             "schema": {
               "$ref": "#/components/schemas/CommonEnumType"
-            }
-          },
-          {
-            "name": "strArrExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "name": "optStrArrExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "name": "strArr",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "name": "optStrArr",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          {
-            "name": "numArrExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "number"
-              }
-            }
-          },
-          {
-            "name": "optNumArrExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "number"
-              }
-            }
-          },
-          {
-            "name": "numArr",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "number"
-              }
-            }
-          },
-          {
-            "name": "optNumArr",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "number"
-              }
-            }
-          },
-          {
-            "name": "boolArrExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "boolean"
-              }
-            }
-          },
-          {
-            "name": "optBoolArrExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "boolean"
-              }
-            }
-          },
-          {
-            "name": "boolArr",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "boolean"
-              }
-            }
-          },
-          {
-            "name": "optBoolArr",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "boolean"
-              }
-            }
-          },
-          {
-            "name": "enmArrExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/CommonEnumType"
-              }
-            }
-          },
-          {
-            "name": "optEnmArrExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/CommonEnumType"
-              }
-            }
-          },
-          {
-            "name": "enmArr",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/CommonEnumType"
-              }
-            }
-          },
-          {
-            "name": "optEnmArr",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": false,
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/CommonEnumType"
-              }
-            }
-          },
-          {
-            "name": "objExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/CommonObjectTypeExpl"
-            }
-          },
-          {
-            "name": "optObjExpl",
-            "in": "cookie",
-            "style": "form",
-            "explode": true,
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/CommonOptObjectTypeExpl"
-            }
-          },
-          {
-            "name": "obj",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/CommonObjectType"
-            }
-          },
-          {
-            "name": "optObj",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/CommonOptObjectType"
             }
           }
         ],
@@ -3563,43 +3235,17 @@
       "FormCookieParameters": {
         "type": "object",
         "required": [
-          "strExpl",
           "str",
-          "numExpl",
           "num",
-          "boolExpl",
           "bool",
-          "enmExpl",
-          "enm",
-          "strArrExpl",
-          "strArr",
-          "numArrExpl",
-          "numArr",
-          "boolArrExpl",
-          "boolArr",
-          "enmArrExpl",
-          "enmArr",
-          "objExpl",
-          "obj"
+          "enm"
         ],
         "properties": {
-          "strExpl": {
-            "type": "string"
-          },
-          "optStrExpl": {
-            "type": "string"
-          },
           "str": {
             "type": "string"
           },
           "optStr": {
             "type": "string"
-          },
-          "numExpl": {
-            "type": "number"
-          },
-          "optNumExpl": {
-            "type": "number"
           },
           "num": {
             "type": "number"
@@ -3607,137 +3253,17 @@
           "optNum": {
             "type": "number"
           },
-          "boolExpl": {
-            "type": "boolean"
-          },
-          "optBoolExpl": {
-            "type": "boolean"
-          },
           "bool": {
             "type": "boolean"
           },
           "optBool": {
             "type": "boolean"
           },
-          "enmExpl": {
-            "$ref": "#/components/schemas/CommonEnumType"
-          },
-          "optEnmExpl": {
-            "$ref": "#/components/schemas/CommonEnumType"
-          },
           "enm": {
             "$ref": "#/components/schemas/CommonEnumType"
           },
           "optEnm": {
             "$ref": "#/components/schemas/CommonEnumType"
-          },
-          "strArrExpl": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "optStrArrExpl": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "strArr": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "optStrArr": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "numArrExpl": {
-            "type": "array",
-            "items": {
-              "type": "number"
-            }
-          },
-          "optNumArrExpl": {
-            "type": "array",
-            "items": {
-              "type": "number"
-            }
-          },
-          "numArr": {
-            "type": "array",
-            "items": {
-              "type": "number"
-            }
-          },
-          "optNumArr": {
-            "type": "array",
-            "items": {
-              "type": "number"
-            }
-          },
-          "boolArrExpl": {
-            "type": "array",
-            "items": {
-              "type": "boolean"
-            }
-          },
-          "optBoolArrExpl": {
-            "type": "array",
-            "items": {
-              "type": "boolean"
-            }
-          },
-          "boolArr": {
-            "type": "array",
-            "items": {
-              "type": "boolean"
-            }
-          },
-          "optBoolArr": {
-            "type": "array",
-            "items": {
-              "type": "boolean"
-            }
-          },
-          "enmArrExpl": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommonEnumType"
-            }
-          },
-          "optEnmArrExpl": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommonEnumType"
-            }
-          },
-          "enmArr": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommonEnumType"
-            }
-          },
-          "optEnmArr": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CommonEnumType"
-            }
-          },
-          "objExpl": {
-            "$ref": "#/components/schemas/CommonObjectTypeExpl"
-          },
-          "optObjExpl": {
-            "$ref": "#/components/schemas/CommonOptObjectTypeExpl"
-          },
-          "obj": {
-            "$ref": "#/components/schemas/CommonObjectType"
-          },
-          "optObj": {
-            "$ref": "#/components/schemas/CommonOptObjectType"
           }
         }
       },

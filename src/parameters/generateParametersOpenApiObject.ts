@@ -99,7 +99,7 @@ function generateParametersSchema(input: ParameterGeneratorConfig): SchemaObject
   return {
     type: 'object',
     title: getParameterSchemaName(input),
-    required: requiredProps,
+    ...(requiredProps.length > 0 ? { required: requiredProps } : {}),
     properties,
   }
 }

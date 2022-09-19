@@ -1931,16 +1931,6 @@
         "description": "Endpoint for testing cookie parameters with form serialization",
         "parameters": [
           {
-            "name": "str",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "optStr",
             "in": "cookie",
             "style": "form",
@@ -1948,16 +1938,6 @@
             "required": false,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "num",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": true,
-            "schema": {
-              "type": "number"
             }
           },
           {
@@ -1971,16 +1951,6 @@
             }
           },
           {
-            "name": "bool",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": true,
-            "schema": {
-              "type": "boolean"
-            }
-          },
-          {
             "name": "optBool",
             "in": "cookie",
             "style": "form",
@@ -1988,16 +1958,6 @@
             "required": false,
             "schema": {
               "type": "boolean"
-            }
-          },
-          {
-            "name": "enm",
-            "in": "cookie",
-            "style": "form",
-            "explode": false,
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/CommonEnumType"
             }
           },
           {
@@ -3234,33 +3194,15 @@
       },
       "FormCookieParameters": {
         "type": "object",
-        "required": [
-          "str",
-          "num",
-          "bool",
-          "enm"
-        ],
         "properties": {
-          "str": {
-            "type": "string"
-          },
           "optStr": {
             "type": "string"
-          },
-          "num": {
-            "type": "number"
           },
           "optNum": {
             "type": "number"
           },
-          "bool": {
-            "type": "boolean"
-          },
           "optBool": {
             "type": "boolean"
-          },
-          "enm": {
-            "$ref": "#/components/schemas/CommonEnumType"
           },
           "optEnm": {
             "$ref": "#/components/schemas/CommonEnumType"

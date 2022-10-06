@@ -2,7 +2,7 @@ import { HttpMethod } from '@oats-ts/openapi-http'
 import { OpenAPIObject, OperationObject, PathsObject } from '@oats-ts/openapi-model'
 import { camelCase } from '../common/camelCase'
 
-const methods: HttpMethod[] = ['get', 'post', 'put', 'patch', 'options', 'delete']
+const methods: HttpMethod[] = ['get', 'post', 'put', 'patch', 'delete']
 
 function generatePathsObject(): PathsObject {
   return methods.reduce((paths: PathsObject, method: HttpMethod): PathsObject => {

@@ -105,31 +105,6 @@
         }
       }
     },
-    "/options-method": {
-      "options": {
-        "operationId": "optionsMethod",
-        "responses": {
-          "200": {
-            "description": "Endpoint using options http method",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "required": [
-                    "methodUsed"
-                  ],
-                  "properties": {
-                    "methodUsed": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/delete-method": {
       "delete": {
         "operationId": "deleteMethod",

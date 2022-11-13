@@ -6,7 +6,7 @@
   },
   "paths": {
     "/login": {
-      "get": {
+      "post": {
         "operationId": "login",
         "description": "This operation takes login info, and returns a cookie containing a token",
         "requestBody": {
@@ -57,6 +57,7 @@
               "application/json": {
                 "schema": {
                   "type": "object",
+                  "required": ["name"],
                   "properties": {
                     "name": {
                       "type": "string"

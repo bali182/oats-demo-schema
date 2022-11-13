@@ -1,0 +1,75 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Cookies",
+    "version": "1.0"
+  },
+  "paths": {
+    "/login": {
+      "get": {
+        "operationId": "login",
+        "description": "This operation takes login info, and returns a cookie containing a token",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "This operation has no response body"
+          },
+          "401": {
+            "description": "This operation has no response body"
+          }
+        }
+      }
+    },
+    "/protected": {
+      "get": {
+        "operationId": "protectedPath",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "cookie",
+            "style": "form",
+            "explode": false,
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The secret",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

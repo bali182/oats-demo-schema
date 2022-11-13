@@ -15,11 +15,9 @@
             "application/json": {
               "schema": {
                 "type": "object",
+                "required": ["name"],
                 "properties": {
                   "name": {
-                    "type": "string"
-                  },
-                  "password": {
                     "type": "string"
                   }
                 }
@@ -60,13 +58,16 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "value": {
+                    "name": {
                       "type": "string"
                     }
                   }
                 }
               }
             }
+          },
+          "401": {
+            "description": "This operation has no response body"
           }
         }
       }

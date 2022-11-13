@@ -46,7 +46,7 @@
             "in": "cookie",
             "style": "form",
             "explode": false,
-            "required": false,
+            "required": true,
             "schema": {
               "type": "string"
             }

@@ -16,6 +16,10 @@
       "post": { "responses": { "200": {} } }
     },
     "/foo/{param1}/bar/{param2}": {
+      "parameters": [
+        { "name": "param1", "in": "path", "schema": { "type": "string" }, "required": true },
+        { "name": "param2", "in": "path", "schema": { "type": "string" }, "required": true }
+      ],
       "patch": { "responses": { "200": {} } },
       "put": { "responses": { "200": {} } }
     }

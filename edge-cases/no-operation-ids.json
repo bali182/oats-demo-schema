@@ -1,0 +1,23 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "NoOperationIds",
+    "version": "1.0"
+  },
+  "paths": {
+    "/": {
+      "delete": { "responses": { "200": {} } }
+    },
+    "/123": {
+      "delete": { "responses": { "200": {} } }
+    },
+    "/foo": {
+      "get": { "responses": { "200": {} } },
+      "post": { "responses": { "200": {} } }
+    },
+    "/foo/{param1}/bar/{param2}": {
+      "patch": { "responses": { "200": {} } },
+      "put": { "responses": { "200": {} } }
+    }
+  }
+}

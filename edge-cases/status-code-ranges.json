@@ -1,0 +1,49 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "StatusCodeRanges",
+    "version": "1.0"
+  },
+  "paths": {
+    "/1xx": {
+      "get": {
+        "operationId": "range1xx",
+        "responses": {
+          "1XX": { "description": "This operation has no response body" }
+        }
+      }
+    },
+    "/2xx": {
+      "get": {
+        "operationId": "range2xx",
+        "responses": {
+          "2XX": { "description": "This operation has no response body" }
+        }
+      }
+    },
+    "/3xx": {
+      "get": {
+        "operationId": "range3xx",
+        "responses": {
+          "3XX": { "description": "This operation has no response body" }
+        }
+      }
+    },
+    "/4xx": {
+      "get": {
+        "operationId": "range4xx",
+        "responses": {
+          "4XX": { "description": "This operation has no response body" }
+        }
+      }
+    },
+    "/5xx": {
+      "get": {
+        "operationId": "range5xx",
+        "responses": {
+          "5XX": { "description": "This operation has no response body" }
+        }
+      }
+    }
+  }
+}

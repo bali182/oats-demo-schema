@@ -1,0 +1,36 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "MissingContentSchema",
+    "version": "1.0"
+  },
+  "paths": {
+    "/missing-response-schema": {
+      "get": {
+        "operationId": "missingResponseSchema",
+        "responses": {
+          "200": {
+            "description": "No schema in content",
+            "content": { "application/json": {} }
+          }
+        }
+      }
+    },
+    "/missing-request-body-schema": {
+      "get": {
+        "operationId": "missingRequestBodySchema",
+        "requestBody": {
+          "content": {
+            "application/json": {}
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {}
+          }
+        }
+      }
+    }
+  }
+}

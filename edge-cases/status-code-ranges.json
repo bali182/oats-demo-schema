@@ -7,7 +7,7 @@
   "paths": {
     "/1xx": {
       "get": {
-        "operationId": "range1xx",
+        "operationId": "range1XX",
         "responses": {
           "1XX": { "description": "This operation has no response body" }
         }
@@ -15,7 +15,7 @@
     },
     "/2xx": {
       "get": {
-        "operationId": "range2xx",
+        "operationId": "range2XX",
         "responses": {
           "2XX": { "description": "This operation has no response body" }
         }
@@ -23,7 +23,7 @@
     },
     "/3xx": {
       "get": {
-        "operationId": "range3xx",
+        "operationId": "range3XX",
         "responses": {
           "3XX": { "description": "This operation has no response body" }
         }
@@ -31,7 +31,7 @@
     },
     "/4xx": {
       "get": {
-        "operationId": "range4xx",
+        "operationId": "range4XX",
         "responses": {
           "4XX": { "description": "This operation has no response body" }
         }
@@ -39,7 +39,7 @@
     },
     "/5xx": {
       "get": {
-        "operationId": "range5xx",
+        "operationId": "range5XX",
         "responses": {
           "5XX": { "description": "This operation has no response body" }
         }

@@ -9,11 +9,31 @@
       "get": {
         "operationId": "withNormalStatuses",
         "responses": {
-          "4XX": { "description": "This operation has no response body" },
-          "400": { "description": "This operation has no response body" },
-          "401": { "description": "This operation has no response body" },
-          "403": { "description": "This operation has no response body" },
-          "500": { "description": "This operation has no response body" }
+          "4XX": {
+            "description": "This operation has no response body",
+            "content": { "application/json": { "schema": { "type": "string" } } },
+            "headers": { "X-Foo": { "schema": { "type": "string" } } }
+          },
+          "400": {
+            "description": "This operation has no response body",
+            "content": { "application/json": { "schema": { "type": "string" } } },
+            "headers": { "X-Foo": { "schema": { "type": "string" } } }
+          },
+          "401": {
+            "description": "This operation has no response body",
+            "content": { "application/json": { "schema": { "type": "string" } } },
+            "headers": { "X-Foo": { "schema": { "type": "string" } } }
+          },
+          "403": {
+            "description": "This operation has no response body",
+            "content": { "application/json": { "schema": { "type": "string" } } },
+            "headers": { "X-Foo": { "schema": { "type": "string" } } }
+          },
+          "500": {
+            "description": "This operation has no response body",
+            "content": { "application/json": { "schema": { "type": "string" } } },
+            "headers": { "X-Foo": { "schema": { "type": "string" } } }
+          }
         }
       }
     },
@@ -21,7 +41,11 @@
       "get": {
         "operationId": "range1XX",
         "responses": {
-          "1XX": { "description": "This operation has no response body" }
+          "1XX": {
+            "description": "This operation has no response body",
+            "content": { "application/json": { "schema": { "type": "string" } } },
+            "headers": { "X-Foo": { "schema": { "type": "string" } } }
+          }
         }
       }
     },
@@ -29,7 +53,11 @@
       "get": {
         "operationId": "range2XX",
         "responses": {
-          "2XX": { "description": "This operation has no response body" }
+          "2XX": {
+            "description": "This operation has no response body",
+            "content": { "application/json": { "schema": { "type": "string" } } },
+            "headers": { "X-Foo": { "schema": { "type": "string" } } }
+          }
         }
       }
     },
@@ -37,7 +65,11 @@
       "get": {
         "operationId": "range3XX",
         "responses": {
-          "3XX": { "description": "This operation has no response body" }
+          "3XX": {
+            "description": "This operation has no response body",
+            "content": { "application/json": { "schema": { "type": "string" } } },
+            "headers": { "X-Foo": { "schema": { "type": "string" } } }
+          }
         }
       }
     },
@@ -45,7 +77,11 @@
       "get": {
         "operationId": "range4XX",
         "responses": {
-          "4XX": { "description": "This operation has no response body" }
+          "4XX": {
+            "description": "This operation has no response body",
+            "content": { "application/json": { "schema": { "type": "string" } } },
+            "headers": { "X-Foo": { "schema": { "type": "string" } } }
+          }
         }
       }
     },
@@ -53,7 +89,11 @@
       "get": {
         "operationId": "range5XX",
         "responses": {
-          "5XX": { "description": "This operation has no response body" }
+          "5XX": {
+            "description": "This operation has no response body",
+            "content": { "application/json": { "schema": { "type": "string" } } },
+            "headers": { "X-Foo": { "schema": { "type": "string" } } }
+          }
         }
       }
     }

@@ -5,6 +5,18 @@
     "version": "1.0"
   },
   "paths": {
+    "/with-normal-statuses": {
+      "get": {
+        "operationId": "withNormalStatuses",
+        "responses": {
+          "4XX": { "description": "This operation has no response body" },
+          "400": { "description": "This operation has no response body" },
+          "401": { "description": "This operation has no response body" },
+          "403": { "description": "This operation has no response body" },
+          "500": { "description": "This operation has no response body" }
+        }
+      }
+    },
     "/1xx": {
       "get": {
         "operationId": "range1XX",

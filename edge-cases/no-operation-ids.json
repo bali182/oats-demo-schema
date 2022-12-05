@@ -22,6 +22,9 @@
       ],
       "patch": { "responses": { "200": {} } },
       "put": { "responses": { "200": {} } }
+    },
+    "/empty": {
+      "get": { "operationId": "", "responses": { "200": {} } }
     }
   }
 }

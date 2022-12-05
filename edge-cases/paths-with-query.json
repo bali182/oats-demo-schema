@@ -1,0 +1,15 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "PathsWithQuery",
+    "version": "1.0"
+  },
+  "paths": {
+    "/foo/bar?a=b": {
+      "get": { "responses": { "200": {} } }
+    },
+    "/foo/boop/bar?a={b}&b={c}": {
+      "get": { "responses": { "200": {} } }
+    }
+  }
+}

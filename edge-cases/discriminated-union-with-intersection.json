@@ -1,0 +1,112 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "DiscriminatedUnionWithIntersection",
+    "description": "This file contains named union types with intersection types mixed in",
+    "version": "1.0"
+  },
+  "components": {
+    "schemas": {
+      "TopLevelUnionType": {
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "LeafType1": "#/components/schemas/LeafType1",
+            "MidLevelUnionType": "#/components/schemas/MidLevelUnionType"
+          }
+        },
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/LeafType1"
+          },
+          {
+            "$ref": "#/components/schemas/MidLevelUnionType"
+          },
+          {
+            "$ref": "#/components/schemas/MidLevelIntersectionType"
+          }
+        ]
+      },
+      "MidLevelUnionType": {
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "LeafType2": "#/components/schemas/LeafType2",
+            "LeafType3": "#/components/schemas/LeafType3"
+          }
+        },
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/LeafType2"
+          },
+          {
+            "$ref": "#/components/schemas/LeafType3"
+          },
+          {
+            "$ref": "#/components/schemas/LeafIntersectionType"
+          }
+        ]
+      },
+      "MidLevelIntersectionType": {
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "cat": { "type": "string" }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "dog": { "type": "number" }
+            }
+          }
+        ]
+      },
+      "LeafType1": {
+        "type": "object",
+        "required": ["foo"],
+        "properties": {
+          "foo": {
+            "type": "string"
+          }
+        }
+      },
+      "LeafType2": {
+        "type": "object",
+        "required": ["bar"],
+        "properties": {
+          "bar": {
+            "type": "string"
+          }
+        }
+      },
+      "LeafType3": {
+        "type": "object",
+        "required": ["foobar"],
+        "properties": {
+          "foobar": {
+            "type": "string"
+          }
+        }
+      },
+      "LeafIntersectionType": {
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "racoon": { "type": "string" }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "meerkat": { "type": "number" }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "paths": {}
+}

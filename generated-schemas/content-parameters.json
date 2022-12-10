@@ -1,0 +1,1446 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ContentParameters",
+    "version": "1.0"
+  },
+  "paths": {
+    "/path-parameters/{str}/{num}/{bool}/{enm}/{strArr}/{numArr}/{boolArr}/{enmArr}/{obj}": {
+      "get": {
+        "operationId": "PathParameters",
+        "description": "Endpoint for testing path parameters with \"content\" object",
+        "parameters": [
+          {
+            "name": "str",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "num",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          {
+            "name": "bool",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          {
+            "name": "enm",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonEnumType"
+                }
+              }
+            }
+          },
+          {
+            "name": "strArr",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "numArr",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "boolArr",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "enmArr",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommonEnumType"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "obj",
+            "in": "path",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonObjectType"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response returning all the path parameters in an object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PathParameters"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error response on wrong data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ParameterIssue"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/query-parameters": {
+      "get": {
+        "operationId": "QueryParameters",
+        "description": "Endpoint for testing query parameters with \"content\" object",
+        "parameters": [
+          {
+            "name": "str",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "optStr",
+            "in": "query",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "num",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          {
+            "name": "optNum",
+            "in": "query",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          {
+            "name": "bool",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          {
+            "name": "optBool",
+            "in": "query",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          {
+            "name": "enm",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonEnumType"
+                }
+              }
+            }
+          },
+          {
+            "name": "optEnm",
+            "in": "query",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonEnumType"
+                }
+              }
+            }
+          },
+          {
+            "name": "strArr",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "optStrArr",
+            "in": "query",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "numArr",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "optNumArr",
+            "in": "query",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "boolArr",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "optBoolArr",
+            "in": "query",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "enmArr",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommonEnumType"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "optEnmArr",
+            "in": "query",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommonEnumType"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "obj",
+            "in": "query",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonObjectType"
+                }
+              }
+            }
+          },
+          {
+            "name": "optObj",
+            "in": "query",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonOptObjectType"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response returning all the query parameters in an object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryParameters"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error response on wrong data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ParameterIssue"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/header-parameters": {
+      "get": {
+        "operationId": "HeaderParameters",
+        "description": "Endpoint for testing header parameters with \"content\" object",
+        "parameters": [
+          {
+            "name": "X-Str-Header",
+            "in": "header",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "X-OptStr-Header",
+            "in": "header",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "X-Num-Header",
+            "in": "header",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          {
+            "name": "X-OptNum-Header",
+            "in": "header",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          {
+            "name": "X-Bool-Header",
+            "in": "header",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          {
+            "name": "X-OptBool-Header",
+            "in": "header",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          {
+            "name": "X-Enm-Header",
+            "in": "header",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonEnumType"
+                }
+              }
+            }
+          },
+          {
+            "name": "X-OptEnm-Header",
+            "in": "header",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonEnumType"
+                }
+              }
+            }
+          },
+          {
+            "name": "X-StrArr-Header",
+            "in": "header",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "X-OptStrArr-Header",
+            "in": "header",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "X-NumArr-Header",
+            "in": "header",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "X-OptNumArr-Header",
+            "in": "header",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "X-BoolArr-Header",
+            "in": "header",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "X-OptBoolArr-Header",
+            "in": "header",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "X-EnmArr-Header",
+            "in": "header",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommonEnumType"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "X-OptEnmArr-Header",
+            "in": "header",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommonEnumType"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "X-Obj-Header",
+            "in": "header",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonObjectType"
+                }
+              }
+            }
+          },
+          {
+            "name": "X-OptObj-Header",
+            "in": "header",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonOptObjectType"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response returning all the header parameters in an object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HeaderParameters"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error response on wrong data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ParameterIssue"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cookie-parameters": {
+      "get": {
+        "operationId": "CookieParameters",
+        "description": "Endpoint for testing cookie parameters with \"content\" object",
+        "parameters": [
+          {
+            "name": "str",
+            "in": "cookie",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "optStr",
+            "in": "cookie",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "num",
+            "in": "cookie",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          {
+            "name": "optNum",
+            "in": "cookie",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          {
+            "name": "bool",
+            "in": "cookie",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          {
+            "name": "optBool",
+            "in": "cookie",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          {
+            "name": "enm",
+            "in": "cookie",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonEnumType"
+                }
+              }
+            }
+          },
+          {
+            "name": "optEnm",
+            "in": "cookie",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonEnumType"
+                }
+              }
+            }
+          },
+          {
+            "name": "strArr",
+            "in": "cookie",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "optStrArr",
+            "in": "cookie",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "numArr",
+            "in": "cookie",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "optNumArr",
+            "in": "cookie",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "boolArr",
+            "in": "cookie",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "optBoolArr",
+            "in": "cookie",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "enmArr",
+            "in": "cookie",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommonEnumType"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "optEnmArr",
+            "in": "cookie",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CommonEnumType"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "obj",
+            "in": "cookie",
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonObjectType"
+                }
+              }
+            }
+          },
+          {
+            "name": "optObj",
+            "in": "cookie",
+            "required": false,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CommonOptObjectType"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response returning all the cookie parameters in an object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CookieParameters"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error response on wrong data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ParameterIssue"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PathParameters": {
+        "type": "object",
+        "required": [
+          "str",
+          "num",
+          "bool",
+          "enm",
+          "strArr",
+          "numArr",
+          "boolArr",
+          "enmArr",
+          "obj"
+        ],
+        "properties": {
+          "str": {
+            "type": "string"
+          },
+          "num": {
+            "type": "number"
+          },
+          "bool": {
+            "type": "boolean"
+          },
+          "enm": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          },
+          "strArr": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "numArr": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "boolArr": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "enmArr": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommonEnumType"
+            }
+          },
+          "obj": {
+            "$ref": "#/components/schemas/CommonObjectType"
+          }
+        }
+      },
+      "QueryParameters": {
+        "type": "object",
+        "required": [
+          "str",
+          "num",
+          "bool",
+          "enm",
+          "strArr",
+          "numArr",
+          "boolArr",
+          "enmArr",
+          "obj"
+        ],
+        "properties": {
+          "str": {
+            "type": "string"
+          },
+          "optStr": {
+            "type": "string"
+          },
+          "num": {
+            "type": "number"
+          },
+          "optNum": {
+            "type": "number"
+          },
+          "bool": {
+            "type": "boolean"
+          },
+          "optBool": {
+            "type": "boolean"
+          },
+          "enm": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          },
+          "optEnm": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          },
+          "strArr": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "optStrArr": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "numArr": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "optNumArr": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "boolArr": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "optBoolArr": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "enmArr": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommonEnumType"
+            }
+          },
+          "optEnmArr": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommonEnumType"
+            }
+          },
+          "obj": {
+            "$ref": "#/components/schemas/CommonObjectType"
+          },
+          "optObj": {
+            "$ref": "#/components/schemas/CommonOptObjectType"
+          }
+        }
+      },
+      "HeaderParameters": {
+        "type": "object",
+        "required": [
+          "X-Str-Header",
+          "X-Num-Header",
+          "X-Bool-Header",
+          "X-Enm-Header",
+          "X-StrArr-Header",
+          "X-NumArr-Header",
+          "X-BoolArr-Header",
+          "X-EnmArr-Header",
+          "X-Obj-Header"
+        ],
+        "properties": {
+          "X-Str-Header": {
+            "type": "string"
+          },
+          "X-OptStr-Header": {
+            "type": "string"
+          },
+          "X-Num-Header": {
+            "type": "number"
+          },
+          "X-OptNum-Header": {
+            "type": "number"
+          },
+          "X-Bool-Header": {
+            "type": "boolean"
+          },
+          "X-OptBool-Header": {
+            "type": "boolean"
+          },
+          "X-Enm-Header": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          },
+          "X-OptEnm-Header": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          },
+          "X-StrArr-Header": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "X-OptStrArr-Header": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "X-NumArr-Header": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "X-OptNumArr-Header": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "X-BoolArr-Header": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "X-OptBoolArr-Header": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "X-EnmArr-Header": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommonEnumType"
+            }
+          },
+          "X-OptEnmArr-Header": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommonEnumType"
+            }
+          },
+          "X-Obj-Header": {
+            "$ref": "#/components/schemas/CommonObjectType"
+          },
+          "X-OptObj-Header": {
+            "$ref": "#/components/schemas/CommonOptObjectType"
+          }
+        }
+      },
+      "CookieParameters": {
+        "type": "object",
+        "required": [
+          "str",
+          "num",
+          "bool",
+          "enm",
+          "strArr",
+          "numArr",
+          "boolArr",
+          "enmArr",
+          "obj"
+        ],
+        "properties": {
+          "str": {
+            "type": "string"
+          },
+          "optStr": {
+            "type": "string"
+          },
+          "num": {
+            "type": "number"
+          },
+          "optNum": {
+            "type": "number"
+          },
+          "bool": {
+            "type": "boolean"
+          },
+          "optBool": {
+            "type": "boolean"
+          },
+          "enm": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          },
+          "optEnm": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          },
+          "strArr": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "optStrArr": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "numArr": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "optNumArr": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "boolArr": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "optBoolArr": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "enmArr": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommonEnumType"
+            }
+          },
+          "optEnmArr": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CommonEnumType"
+            }
+          },
+          "obj": {
+            "$ref": "#/components/schemas/CommonObjectType"
+          },
+          "optObj": {
+            "$ref": "#/components/schemas/CommonOptObjectType"
+          }
+        }
+      },
+      "CommonEnumType": {
+        "type": "string",
+        "enum": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "ParameterIssue": {
+        "type": "object",
+        "required": [
+          "message"
+        ],
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "CommonObjectType": {
+        "type": "object",
+        "required": [
+          "objStrField",
+          "objNumField",
+          "objBoolField",
+          "objEnmField"
+        ],
+        "properties": {
+          "objStrField": {
+            "type": "string"
+          },
+          "objNumField": {
+            "type": "number"
+          },
+          "objBoolField": {
+            "type": "boolean"
+          },
+          "objEnmField": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          },
+          "objOptStrField": {
+            "type": "string"
+          },
+          "objOptNumField": {
+            "type": "number"
+          },
+          "objOptBoolField": {
+            "type": "boolean"
+          },
+          "objOptEnmField": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          }
+        }
+      },
+      "CommonObjectTypeExpl": {
+        "type": "object",
+        "required": [
+          "objExplStrField",
+          "objExplNumField",
+          "objExplBoolField",
+          "objExplEnmField"
+        ],
+        "properties": {
+          "objExplStrField": {
+            "type": "string"
+          },
+          "objExplNumField": {
+            "type": "number"
+          },
+          "objExplBoolField": {
+            "type": "boolean"
+          },
+          "objExplEnmField": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          },
+          "objExplOptStrField": {
+            "type": "string"
+          },
+          "objExplOptNumField": {
+            "type": "number"
+          },
+          "objExplOptBoolField": {
+            "type": "boolean"
+          },
+          "objExplOptEnmField": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          }
+        }
+      },
+      "CommonOptObjectType": {
+        "type": "object",
+        "required": [
+          "optObjStrField",
+          "optObjNumField",
+          "optObjBoolField",
+          "optObjEnmField"
+        ],
+        "properties": {
+          "optObjStrField": {
+            "type": "string"
+          },
+          "optObjNumField": {
+            "type": "number"
+          },
+          "optObjBoolField": {
+            "type": "boolean"
+          },
+          "optObjEnmField": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          },
+          "optObjOptStrField": {
+            "type": "string"
+          },
+          "optObjOptNumField": {
+            "type": "number"
+          },
+          "optObjOptBoolField": {
+            "type": "boolean"
+          },
+          "optObjOptEnmField": {
+            "$ref": "#/components/schemas/CommonEnumType"
+          }
+        }
+      }
+    }
+  }
+}

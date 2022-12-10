@@ -58,7 +58,7 @@ function generateParametersSchema(input: ParameterGeneratorConfig): SchemaObject
     for (const required of requiredValues) {
       const schema = getSchema(schemaType, required)
       let name = camelCase(getFieldName(schema, !required))
-      name = location === 'header' ? `X-${pascalCase(name)}-Header` : name
+      name = location === 'header' || location === 'response-header' ? `X-${pascalCase(name)}-Header` : name
       properties[name] = schema
       if (required) {
         requiredProps.push(name)

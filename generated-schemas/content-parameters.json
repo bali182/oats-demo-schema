@@ -1576,93 +1576,93 @@
       "ResponseHeaderParameters": {
         "type": "object",
         "required": [
-          "str",
-          "num",
-          "bool",
-          "enm",
-          "strArr",
-          "numArr",
-          "boolArr",
-          "enmArr",
-          "obj"
+          "X-Str-Header",
+          "X-Num-Header",
+          "X-Bool-Header",
+          "X-Enm-Header",
+          "X-StrArr-Header",
+          "X-NumArr-Header",
+          "X-BoolArr-Header",
+          "X-EnmArr-Header",
+          "X-Obj-Header"
         ],
         "properties": {
-          "str": {
+          "X-Str-Header": {
             "type": "string"
           },
-          "optStr": {
+          "X-OptStr-Header": {
             "type": "string"
           },
-          "num": {
+          "X-Num-Header": {
             "type": "number"
           },
-          "optNum": {
+          "X-OptNum-Header": {
             "type": "number"
           },
-          "bool": {
+          "X-Bool-Header": {
             "type": "boolean"
           },
-          "optBool": {
+          "X-OptBool-Header": {
             "type": "boolean"
           },
-          "enm": {
+          "X-Enm-Header": {
             "$ref": "#/components/schemas/ContentCommonEnumType"
           },
-          "optEnm": {
+          "X-OptEnm-Header": {
             "$ref": "#/components/schemas/ContentCommonEnumType"
           },
-          "strArr": {
+          "X-StrArr-Header": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "optStrArr": {
+          "X-OptStrArr-Header": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "numArr": {
+          "X-NumArr-Header": {
             "type": "array",
             "items": {
               "type": "number"
             }
           },
-          "optNumArr": {
+          "X-OptNumArr-Header": {
             "type": "array",
             "items": {
               "type": "number"
             }
           },
-          "boolArr": {
+          "X-BoolArr-Header": {
             "type": "array",
             "items": {
               "type": "boolean"
             }
           },
-          "optBoolArr": {
+          "X-OptBoolArr-Header": {
             "type": "array",
             "items": {
               "type": "boolean"
             }
           },
-          "enmArr": {
+          "X-EnmArr-Header": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ContentCommonEnumType"
             }
           },
-          "optEnmArr": {
+          "X-OptEnmArr-Header": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/ContentCommonEnumType"
             }
           },
-          "obj": {
+          "X-Obj-Header": {
             "$ref": "#/components/schemas/ContentCommonObjectType"
           },
-          "optObj": {
+          "X-OptObj-Header": {
             "$ref": "#/components/schemas/ContentCommonOptObjectType"
           }
         }

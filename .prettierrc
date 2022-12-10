@@ -14,6 +14,12 @@
       }
     },
     {
+      "files": "*.yaml",
+      "options": {
+        "parser": "yaml"
+      }
+    },
+    {
       "files": "*.json",
       "options": {
         "parser": "json"

@@ -53,7 +53,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonEnumType"
+                  "$ref": "#/components/schemas/ContentCommonEnumType"
                 }
               }
             }
@@ -112,7 +112,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CommonEnumType"
+                    "$ref": "#/components/schemas/ContentCommonEnumType"
                   }
                 }
               }
@@ -125,7 +125,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonObjectType"
+                  "$ref": "#/components/schemas/ContentCommonObjectType"
                 }
               }
             }
@@ -149,7 +149,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ParameterIssue"
+                    "$ref": "#/components/schemas/ContentParameterIssue"
                   }
                 }
               }
@@ -242,7 +242,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonEnumType"
+                  "$ref": "#/components/schemas/ContentCommonEnumType"
                 }
               }
             }
@@ -254,7 +254,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonEnumType"
+                  "$ref": "#/components/schemas/ContentCommonEnumType"
                 }
               }
             }
@@ -358,7 +358,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CommonEnumType"
+                    "$ref": "#/components/schemas/ContentCommonEnumType"
                   }
                 }
               }
@@ -373,7 +373,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CommonEnumType"
+                    "$ref": "#/components/schemas/ContentCommonEnumType"
                   }
                 }
               }
@@ -386,7 +386,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonObjectType"
+                  "$ref": "#/components/schemas/ContentCommonObjectType"
                 }
               }
             }
@@ -398,7 +398,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonOptObjectType"
+                  "$ref": "#/components/schemas/ContentCommonOptObjectType"
                 }
               }
             }
@@ -422,7 +422,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ParameterIssue"
+                    "$ref": "#/components/schemas/ContentParameterIssue"
                   }
                 }
               }
@@ -515,7 +515,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonEnumType"
+                  "$ref": "#/components/schemas/ContentCommonEnumType"
                 }
               }
             }
@@ -527,7 +527,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonEnumType"
+                  "$ref": "#/components/schemas/ContentCommonEnumType"
                 }
               }
             }
@@ -631,7 +631,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CommonEnumType"
+                    "$ref": "#/components/schemas/ContentCommonEnumType"
                   }
                 }
               }
@@ -646,7 +646,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CommonEnumType"
+                    "$ref": "#/components/schemas/ContentCommonEnumType"
                   }
                 }
               }
@@ -659,7 +659,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonObjectType"
+                  "$ref": "#/components/schemas/ContentCommonObjectType"
                 }
               }
             }
@@ -671,7 +671,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonOptObjectType"
+                  "$ref": "#/components/schemas/ContentCommonOptObjectType"
                 }
               }
             }
@@ -695,7 +695,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ParameterIssue"
+                    "$ref": "#/components/schemas/ContentParameterIssue"
                   }
                 }
               }
@@ -788,7 +788,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonEnumType"
+                  "$ref": "#/components/schemas/ContentCommonEnumType"
                 }
               }
             }
@@ -800,7 +800,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonEnumType"
+                  "$ref": "#/components/schemas/ContentCommonEnumType"
                 }
               }
             }
@@ -904,7 +904,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CommonEnumType"
+                    "$ref": "#/components/schemas/ContentCommonEnumType"
                   }
                 }
               }
@@ -919,7 +919,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CommonEnumType"
+                    "$ref": "#/components/schemas/ContentCommonEnumType"
                   }
                 }
               }
@@ -932,7 +932,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonObjectType"
+                  "$ref": "#/components/schemas/ContentCommonObjectType"
                 }
               }
             }
@@ -944,7 +944,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CommonOptObjectType"
+                  "$ref": "#/components/schemas/ContentCommonOptObjectType"
                 }
               }
             }
@@ -968,7 +968,263 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ParameterIssue"
+                    "$ref": "#/components/schemas/ContentParameterIssue"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/response-header-parameters": {
+      "get": {
+        "operationId": "ResponseHeaderParameters",
+        "description": "Endpoint for testing response-header parameters with \"content\" object",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResponseHeaderParameters"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response returning all the response-header parameters in an object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "ok"
+                  ],
+                  "properties": {
+                    "ok": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "X-Str-Header": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "X-OptStr-Header": {
+                "required": false,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "X-Num-Header": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "number"
+                    }
+                  }
+                }
+              },
+              "X-OptNum-Header": {
+                "required": false,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "number"
+                    }
+                  }
+                }
+              },
+              "X-Bool-Header": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              },
+              "X-OptBool-Header": {
+                "required": false,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              },
+              "X-Enm-Header": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/ContentCommonEnumType"
+                    }
+                  }
+                }
+              },
+              "X-OptEnm-Header": {
+                "required": false,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/ContentCommonEnumType"
+                    }
+                  }
+                }
+              },
+              "X-StrArr-Header": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "X-OptStrArr-Header": {
+                "required": false,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "X-NumArr-Header": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              },
+              "X-OptNumArr-Header": {
+                "required": false,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              },
+              "X-BoolArr-Header": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              },
+              "X-OptBoolArr-Header": {
+                "required": false,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              },
+              "X-EnmArr-Header": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ContentCommonEnumType"
+                      }
+                    }
+                  }
+                }
+              },
+              "X-OptEnmArr-Header": {
+                "required": false,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ContentCommonEnumType"
+                      }
+                    }
+                  }
+                }
+              },
+              "X-Obj-Header": {
+                "required": true,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/ContentCommonObjectType"
+                    }
+                  }
+                }
+              },
+              "X-OptObj-Header": {
+                "required": false,
+                "content": {
+                  "application/json": {
+                    "schema": {
+                      "$ref": "#/components/schemas/ContentCommonOptObjectType"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error response on wrong data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ContentParameterIssue"
                   }
                 }
               }
@@ -1004,7 +1260,7 @@
             "type": "boolean"
           },
           "enm": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           },
           "strArr": {
             "type": "array",
@@ -1027,11 +1283,11 @@
           "enmArr": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CommonEnumType"
+              "$ref": "#/components/schemas/ContentCommonEnumType"
             }
           },
           "obj": {
-            "$ref": "#/components/schemas/CommonObjectType"
+            "$ref": "#/components/schemas/ContentCommonObjectType"
           }
         }
       },
@@ -1068,10 +1324,10 @@
             "type": "boolean"
           },
           "enm": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           },
           "optEnm": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           },
           "strArr": {
             "type": "array",
@@ -1112,20 +1368,20 @@
           "enmArr": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CommonEnumType"
+              "$ref": "#/components/schemas/ContentCommonEnumType"
             }
           },
           "optEnmArr": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CommonEnumType"
+              "$ref": "#/components/schemas/ContentCommonEnumType"
             }
           },
           "obj": {
-            "$ref": "#/components/schemas/CommonObjectType"
+            "$ref": "#/components/schemas/ContentCommonObjectType"
           },
           "optObj": {
-            "$ref": "#/components/schemas/CommonOptObjectType"
+            "$ref": "#/components/schemas/ContentCommonOptObjectType"
           }
         }
       },
@@ -1162,10 +1418,10 @@
             "type": "boolean"
           },
           "X-Enm-Header": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           },
           "X-OptEnm-Header": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           },
           "X-StrArr-Header": {
             "type": "array",
@@ -1206,20 +1462,20 @@
           "X-EnmArr-Header": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CommonEnumType"
+              "$ref": "#/components/schemas/ContentCommonEnumType"
             }
           },
           "X-OptEnmArr-Header": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CommonEnumType"
+              "$ref": "#/components/schemas/ContentCommonEnumType"
             }
           },
           "X-Obj-Header": {
-            "$ref": "#/components/schemas/CommonObjectType"
+            "$ref": "#/components/schemas/ContentCommonObjectType"
           },
           "X-OptObj-Header": {
-            "$ref": "#/components/schemas/CommonOptObjectType"
+            "$ref": "#/components/schemas/ContentCommonOptObjectType"
           }
         }
       },
@@ -1256,10 +1512,10 @@
             "type": "boolean"
           },
           "enm": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           },
           "optEnm": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           },
           "strArr": {
             "type": "array",
@@ -1300,24 +1556,118 @@
           "enmArr": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CommonEnumType"
+              "$ref": "#/components/schemas/ContentCommonEnumType"
             }
           },
           "optEnmArr": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/CommonEnumType"
+              "$ref": "#/components/schemas/ContentCommonEnumType"
             }
           },
           "obj": {
-            "$ref": "#/components/schemas/CommonObjectType"
+            "$ref": "#/components/schemas/ContentCommonObjectType"
           },
           "optObj": {
-            "$ref": "#/components/schemas/CommonOptObjectType"
+            "$ref": "#/components/schemas/ContentCommonOptObjectType"
           }
         }
       },
-      "CommonEnumType": {
+      "ResponseHeaderParameters": {
+        "type": "object",
+        "required": [
+          "str",
+          "num",
+          "bool",
+          "enm",
+          "strArr",
+          "numArr",
+          "boolArr",
+          "enmArr",
+          "obj"
+        ],
+        "properties": {
+          "str": {
+            "type": "string"
+          },
+          "optStr": {
+            "type": "string"
+          },
+          "num": {
+            "type": "number"
+          },
+          "optNum": {
+            "type": "number"
+          },
+          "bool": {
+            "type": "boolean"
+          },
+          "optBool": {
+            "type": "boolean"
+          },
+          "enm": {
+            "$ref": "#/components/schemas/ContentCommonEnumType"
+          },
+          "optEnm": {
+            "$ref": "#/components/schemas/ContentCommonEnumType"
+          },
+          "strArr": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "optStrArr": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "numArr": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "optNumArr": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "boolArr": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "optBoolArr": {
+            "type": "array",
+            "items": {
+              "type": "boolean"
+            }
+          },
+          "enmArr": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContentCommonEnumType"
+            }
+          },
+          "optEnmArr": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ContentCommonEnumType"
+            }
+          },
+          "obj": {
+            "$ref": "#/components/schemas/ContentCommonObjectType"
+          },
+          "optObj": {
+            "$ref": "#/components/schemas/ContentCommonOptObjectType"
+          }
+        }
+      },
+      "ContentCommonEnumType": {
         "type": "string",
         "enum": [
           "A",
@@ -1325,7 +1675,7 @@
           "C"
         ]
       },
-      "ParameterIssue": {
+      "ContentParameterIssue": {
         "type": "object",
         "required": [
           "message"
@@ -1336,7 +1686,7 @@
           }
         }
       },
-      "CommonObjectType": {
+      "ContentCommonObjectType": {
         "type": "object",
         "required": [
           "objStrField",
@@ -1355,7 +1705,7 @@
             "type": "boolean"
           },
           "objEnmField": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           },
           "objOptStrField": {
             "type": "string"
@@ -1367,11 +1717,11 @@
             "type": "boolean"
           },
           "objOptEnmField": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           }
         }
       },
-      "CommonObjectTypeExpl": {
+      "ContentCommonObjectTypeExpl": {
         "type": "object",
         "required": [
           "objExplStrField",
@@ -1390,7 +1740,7 @@
             "type": "boolean"
           },
           "objExplEnmField": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           },
           "objExplOptStrField": {
             "type": "string"
@@ -1402,11 +1752,11 @@
             "type": "boolean"
           },
           "objExplOptEnmField": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           }
         }
       },
-      "CommonOptObjectType": {
+      "ContentCommonOptObjectType": {
         "type": "object",
         "required": [
           "optObjStrField",
@@ -1425,7 +1775,7 @@
             "type": "boolean"
           },
           "optObjEnmField": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           },
           "optObjOptStrField": {
             "type": "string"
@@ -1437,7 +1787,7 @@
             "type": "boolean"
           },
           "optObjOptEnmField": {
-            "$ref": "#/components/schemas/CommonEnumType"
+            "$ref": "#/components/schemas/ContentCommonEnumType"
           }
         }
       }

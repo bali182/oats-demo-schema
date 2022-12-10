@@ -61,4 +61,19 @@ export const configs: ParameterGeneratorConfig[] = [
       'object',
     ],
   },
+  {
+    location: 'response-header',
+    requiredValues: [true, false],
+    schemaTypes: [
+      'string',
+      'number',
+      'boolean',
+      'enum',
+      'string-array',
+      'number-array',
+      'boolean-array',
+      'enum-array',
+      'object',
+    ],
+  },
 ]

@@ -10,11 +10,11 @@ import {
 } from '../common/schema'
 
 export const registry: Record<string, () => SchemaObject> = {
-  CommonEnumType: () => _enumSchema,
-  ParameterIssue: () => _parameterIssueSchema,
-  CommonObjectType: () => _objectSchema,
-  CommonObjectTypeExpl: () => _objectSchemaExpl,
-  CommonOptObjectType: () => _optObjectSchema,
+  ContentCommonEnumType: () => _enumSchema,
+  ContentParameterIssue: () => _parameterIssueSchema,
+  ContentCommonObjectType: () => _objectSchema,
+  ContentCommonObjectTypeExpl: () => _objectSchemaExpl,
+  ContentCommonOptObjectType: () => _optObjectSchema,
 }
 
 export const enumSchema: ReferenceObject = referenceOf(_enumSchema, registry)

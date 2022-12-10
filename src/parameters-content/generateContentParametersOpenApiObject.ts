@@ -1,11 +1,14 @@
 import {
   ComponentsObject,
   ContentObject,
+  HeaderObject,
+  HeadersObject,
   OpenAPIObject,
   OperationObject,
   ParameterLocation,
   ParameterObject,
   PathsObject,
+  RequestBodyObject,
 } from '@oats-ts/openapi-model'
 import { Referenceable, SchemaObject } from '@oats-ts/json-schema-model'
 import { entries, omit } from 'lodash'
@@ -70,22 +73,61 @@ function generateParametersSchema(input: ParameterGeneratorConfig): SchemaObject
   }
 }
 
+function generateResponseHeaders({ location, requiredValues, schemaTypes }: ParameterGeneratorConfig): HeadersObject {
+  const headers: HeadersObject = {}
+  for (const schemaType of schemaTypes) {
+    for (const required of requiredValues) {
+      const schema = getSchema(schemaType, required)
+      let name = camelCase(getFieldName(schema, !required))
+      name = location === 'header' || location === 'response-header' ? `X-${pascalCase(name)}-Header` : name
+      const param: HeaderObject = {
+        required,
+        content: {
+          'application/json': {
+            schema,
+          },
+        },
+      }
+      headers[name] = param
+    }
+  }
+  return headers
+}
+
 function generateParameterOperationObject(input: ParameterGeneratorConfig): OperationObject {
-  const parameters = generateParameterObjects(input)
+  const parameters = input.location === 'response-header' ? [] : generateParameterObjects(input)
+  const headers = input.location === 'response-header' ? generateResponseHeaders(input) : undefined
   const content: ContentObject = {
     'application/json': {
-      schema: { $ref: `#/components/schemas/${getParameterSchemaName(input)}` },
+      schema:
+        input.location === 'response-header'
+          ? { type: 'object', required: ['ok'], properties: { ok: { type: 'boolean' } } }
+          : { $ref: `#/components/schemas/${getParameterSchemaName(input)}` },
     },
   }
+
+  const requestBody: RequestBodyObject | undefined =
+    input.location === 'response-header'
+      ? {
+          required: true,
+          content: {
+            'application/json': {
+              schema: { $ref: `#/components/schemas/${getParameterSchemaName(input)}` },
+            },
+          },
+        }
+      : undefined
 
   return {
     operationId: `${pascalCase(input.location)}Parameters`,
     description: `Endpoint for testing ${input.location} parameters with "content" object`,
     parameters,
+    requestBody,
     responses: {
       200: {
         description: `Successful response returning all the ${input.location} parameters in an object`,
         content,
+        headers,
       },
       400: {
         description: `Error response on wrong data`,

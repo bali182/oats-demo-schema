@@ -12,7 +12,7 @@ export type SchemaType =
   | 'object'
 
 export type ParameterGeneratorConfig = {
-  location: ParameterLocation
+  location: ParameterLocation | 'response-header'
   requiredValues: boolean[]
   schemaTypes: SchemaType[]
 }

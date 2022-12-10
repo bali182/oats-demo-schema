@@ -159,7 +159,7 @@ function generatePathsObject(): PathsObject {
     return {
       ...paths,
       [url]: {
-        ['get']: operation,
+        [config.location === 'response-header' ? 'post' : 'get']: operation,
       },
     }
   }, {})

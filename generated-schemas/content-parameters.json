@@ -978,7 +978,7 @@
       }
     },
     "/response-header-parameters": {
-      "get": {
+      "post": {
         "operationId": "ResponseHeaderParameters",
         "description": "Endpoint for testing response-header parameters with \"content\" object",
         "parameters": [],

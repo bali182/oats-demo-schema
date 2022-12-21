@@ -1,7 +1,7 @@
 openapi: '3.0.0'
 info:
   version: 1.0.0
-  title: Swagger Petstore
+  title: Swagger Petstore YAML
   description: Slightly modified version of the official PetStore sample
   license:
     name: MIT

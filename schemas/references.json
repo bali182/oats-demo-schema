@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "References",
-    "description": "This file remote refs",
+    "description": "Remote references using the URI reference pattern",
     "version": "1.0"
   },
   "components": {
@@ -15,10 +15,7 @@
       },
       "TypeWithRefOfRemoteRef": {
         "type": "object",
-        "required": [
-          "referenceField",
-          "referenceArrayField"
-        ],
+        "required": ["referenceField", "referenceArrayField"],
         "properties": {
           "referenceField": {
             "$ref": "remote-ref-schemas.json#/components/schemas/TypeWithRemoteRefField"

@@ -2,17 +2,13 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Object schemas",
-    "description": "This file contains named object schemas",
+    "description": "Named object schemas, with exact properties",
     "version": "1.0"
   },
   "components": {
     "schemas": {
       "ObjectWithPrimitiveFieldsType": {
-        "required": [
-          "stringField",
-          "numberField",
-          "booleanField"
-        ],
+        "required": ["stringField", "numberField", "booleanField"],
         "type": "object",
         "properties": {
           "stringField": {
@@ -42,12 +38,7 @@
       },
       "ObjectWithNestedTypeFieldsType": {
         "type": "object",
-        "required": [
-          "arrayField",
-          "objectField",
-          "tupleField",
-          "enumField"
-        ],
+        "required": ["arrayField", "objectField", "tupleField", "enumField"],
         "properties": {
           "arrayField": {
             "type": "array",
@@ -76,20 +67,13 @@
           },
           "enumField": {
             "type": "string",
-            "enum": [
-              "A",
-              "B",
-              "C"
-            ]
+            "enum": ["A", "B", "C"]
           }
         }
       },
       "ObjectWithReferenceFieldsType": {
         "type": "object",
-        "required": [
-          "referenceField",
-          "referenceArrayField"
-        ],
+        "required": ["referenceField", "referenceArrayField"],
         "properties": {
           "referenceField": {
             "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"

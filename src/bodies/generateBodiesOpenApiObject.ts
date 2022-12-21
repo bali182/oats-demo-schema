@@ -54,6 +54,7 @@ export function generateBodiesOpenApiObject(): OpenAPIObject {
     openapi: '3.0.0',
     info: {
       title: 'Bodies',
+      description: 'Different kind of request and response body showcase',
       version: '1.0',
     },
     components: getComponents(),

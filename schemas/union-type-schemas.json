@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Object schemas",
-    "description": "This file contains named union types",
+    "title": "Union Schemas",
+    "description": "Named union types without the usage of discriminators",
     "version": "1.0"
   },
   "components": {
@@ -24,9 +24,7 @@
         "oneOf": [
           {
             "type": "object",
-            "required": [
-              "foo"
-            ],
+            "required": ["foo"],
             "properties": {
               "foo": {
                 "type": "string"
@@ -35,9 +33,7 @@
           },
           {
             "type": "object",
-            "required": [
-              "bar"
-            ],
+            "required": ["bar"],
             "properties": {
               "bar": {
                 "type": "number"
@@ -68,10 +64,7 @@
       },
       "LeafType1": {
         "type": "object",
-        "required": [
-          "type",
-          "foo"
-        ],
+        "required": ["type", "foo"],
         "properties": {
           "type": {
             "const": "LeafType1"
@@ -83,10 +76,7 @@
       },
       "LeafType2": {
         "type": "object",
-        "required": [
-          "type",
-          "bar"
-        ],
+        "required": ["type", "bar"],
         "properties": {
           "type": {
             "const": "LeafType2"
@@ -98,10 +88,7 @@
       },
       "LeafType3": {
         "type": "object",
-        "required": [
-          "type",
-          "foobar"
-        ],
+        "required": ["type", "foobar"],
         "properties": {
           "type": {
             "const": "LeafType3"

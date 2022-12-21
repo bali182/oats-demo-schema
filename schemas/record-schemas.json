@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Record schemas",
-    "description": "This file contains named record schemas",
+    "description": "Named record schemas of various types",
     "version": "1.0"
   },
   "components": {

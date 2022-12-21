@@ -188,7 +188,8 @@ export function generateContentParametersOpenApiObject(): OpenAPIObject {
   return {
     openapi: '3.0.0',
     info: {
-      title: 'ContentParameters',
+      title: 'Content Parameters',
+      description: 'Parameters bypassing the usual serialization, and using the content field instead',
       version: '1.0',
     },
     paths: generatePathsObject(),

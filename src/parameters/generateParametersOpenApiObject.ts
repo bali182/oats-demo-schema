@@ -198,6 +198,7 @@ export function generateParametersOpenApiObject(): OpenAPIObject {
     openapi: '3.0.0',
     info: {
       title: 'Parameters',
+      description: 'Showcasing the available parameter serialization methods',
       version: '1.0',
     },
     paths: generatePathsObject(),

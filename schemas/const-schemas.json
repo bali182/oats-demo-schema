@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Const schemas",
-    "description": "This file contains named schemas with const (literal) values",
+    "description": "Named schemas with const (literal) values",
     "version": "1.0"
   },
   "components": {
@@ -28,11 +28,7 @@
           {
             "key": 10
           },
-          [
-            3,
-            false,
-            "hello"
-          ]
+          [3, false, "hello"]
         ]
       },
       "SimpleObjectLiteralType": {

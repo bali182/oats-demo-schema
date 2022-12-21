@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Reference Target",
-    "description": "This file contains a single schema, that will be commonly used as reference target",
+    "description": "Single schema, that is commonly used as an external reference target",
     "version": "1.0"
   },
   "components": {

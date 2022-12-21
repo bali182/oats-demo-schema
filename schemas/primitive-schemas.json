@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Primitive schemas",
-    "description": "This file contains primitive named schemas",
+    "description": "Named primitive schemas",
     "version": "1.0"
   },
   "components": {

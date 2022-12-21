@@ -2,16 +2,13 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Ignored fields",
-    "description": "This file an object schema with some fields with the x-ignore property",
+    "description": "Used to demonstrate ignoring certain field from certain generators using the x-ignore field",
     "version": "1.0"
   },
   "components": {
     "schemas": {
       "IgnoredFieldsType": {
-        "required": [
-          "type",
-          "ignored"
-        ],
+        "required": ["type", "ignored"],
         "type": "object",
         "properties": {
           "type": {

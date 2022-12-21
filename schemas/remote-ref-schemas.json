@@ -2,17 +2,14 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Remote refs",
-    "description": "This file remote refs",
+    "description": "Remote references spanning through multiple documents",
     "version": "1.0"
   },
   "components": {
     "schemas": {
       "TypeWithRemoteRefField": {
         "type": "object",
-        "required": [
-          "referenceField",
-          "referenceArrayField"
-        ],
+        "required": ["referenceField", "referenceArrayField"],
         "properties": {
           "referenceField": {
             "$ref": "reference-target-schema.json#/components/schemas/ReferenceTarget"

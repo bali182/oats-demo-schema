@@ -40,7 +40,8 @@ export function generateHttpMethodsOpenApiObject(): OpenAPIObject {
   return {
     openapi: '3.0.0',
     info: {
-      title: 'HttpMethods',
+      title: 'Http Methods',
+      description: 'Showcasing the supported HTTP methods',
       version: '1.0',
     },
     paths: generatePathsObject(),

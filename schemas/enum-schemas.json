@@ -2,47 +2,25 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Enum schemas",
-    "description": "This file contains named enum schemas",
+    "description": "Named enum schemas, with various types of values",
     "version": "1.0"
   },
   "components": {
     "schemas": {
       "StringEnumType": {
-        "enum": [
-          "A",
-          "B",
-          "C"
-        ]
+        "enum": ["A", "B", "C"]
       },
       "NumberEnumType": {
-        "enum": [
-          1,
-          2,
-          3
-        ]
+        "enum": [1, 2, 3]
       },
       "BooleanEnumType": {
-        "enum": [
-          true,
-          false
-        ]
+        "enum": [true, false]
       },
       "ArrayEnumType": {
         "enum": [
-          [
-            "A",
-            "B",
-            "C"
-          ],
-          [
-            1,
-            2,
-            3
-          ],
-          [
-            true,
-            false
-          ]
+          ["A", "B", "C"],
+          [1, 2, 3],
+          [true, false]
         ]
       },
       "ObjectEnumType": {
@@ -72,11 +50,7 @@
           121,
           true,
           null,
-          [
-            "B",
-            2,
-            false
-          ],
+          ["B", 2, false],
           {
             "obj": true
           }

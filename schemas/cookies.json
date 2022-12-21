@@ -2,6 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Cookies",
+    "description": "Showcasing a simplified login flow using cookies",
     "version": "1.0"
   },
   "paths": {

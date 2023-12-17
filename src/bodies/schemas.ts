@@ -75,7 +75,7 @@ const objectWithArrays: SchemaObject = {
 
 const objectWithNestedObjects: SchemaObject = {
   type: 'object',
-  required: ['primObj', 'arrObj'],
+  required: ['primObj', 'nullablePrimObj', 'arrObj'],
   properties: {
     primObj: referenceOf(objectWithPrimitives, registry),
     arrObj: referenceOf(objectWithArrays, registry),

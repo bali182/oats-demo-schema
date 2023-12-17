@@ -154,6 +154,7 @@
         "type": "object",
         "required": [
           "primObj",
+          "nullablePrimObj",
           "arrObj"
         ],
         "properties": {

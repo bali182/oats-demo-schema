@@ -4,11 +4,11 @@ import { OpenAPIObject } from '@oats-ts/openapi-model'
 import { generateBodiesOpenApiObject } from './bodies/generateBodiesOpenApiObject'
 import { generateHttpMethodsOpenApiObject } from './methods/generateHttpMethodsOpenApiObject'
 import { generateParametersOpenApiObject } from './parameters/generateParametersOpenApiObject'
-import { generateContentParametersOpenApiObject } from './parameters-content/generateContentParametersOpenApiObject'
+// import { generateContentParametersOpenApiObject } from './parameters-content/generateContentParametersOpenApiObject'
 
 const schemas: [string, () => OpenAPIObject][] = [
   ['generated-schemas/parameters.json', generateParametersOpenApiObject],
-  ['generated-schemas/content-parameters.json', generateContentParametersOpenApiObject],
+  // ['generated-schemas/content-parameters.json', generateContentParametersOpenApiObject],
   ['generated-schemas/methods.json', generateHttpMethodsOpenApiObject],
   ['generated-schemas/bodies.json', generateBodiesOpenApiObject],
 ]

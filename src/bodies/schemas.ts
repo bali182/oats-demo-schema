@@ -4,6 +4,7 @@ import {
   booleanSchema,
   enumSchema,
   literalSchema,
+  nullable,
   numberSchema,
   referenceOf,
   stringSchema,
@@ -16,6 +17,7 @@ export const registry = {
   PrimitiveOptionalTupleType: () => optionalPrimitiveTuple,
   ObjectWithArrays: () => objectWithArrays,
   ObjectWithPrimitives: () => objectWithPrimitives,
+  ObjectWithNullablePrimitives: () => objectWithNullablePrimitives,
   ObjectWithNestedObjects: () => objectWithNestedObjects,
 }
 
@@ -49,6 +51,17 @@ const objectWithPrimitives: SchemaObject = {
   },
 }
 
+const objectWithNullablePrimitives: SchemaObject = {
+  type: 'object',
+  required: ['nullableBool', 'nullableNum', 'nullableStr', 'nullableLit'],
+  properties: {
+    nullableLit: nullable(literalSchema),
+    nullableStr: nullable(stringSchema),
+    nullableNum: nullable(numberSchema),
+    nullableBool: nullable(booleanSchema),
+  },
+}
+
 const objectWithArrays: SchemaObject = {
   type: 'object',
   required: ['strArr', 'numArr', 'enmArr', 'boolArr'],
@@ -66,6 +79,7 @@ const objectWithNestedObjects: SchemaObject = {
   properties: {
     primObj: referenceOf(objectWithPrimitives, registry),
     arrObj: referenceOf(objectWithArrays, registry),
+    nullablePrimObj: referenceOf(objectWithNullablePrimitives, registry),
   },
 }
 
@@ -81,6 +95,7 @@ export const schemas: Record<string, Referenceable<SchemaObject>> = {
   'enm-arr': arraySchema(referenceOf(enumSchema, registry)),
   'bool-arr': arraySchema(booleanSchema),
   'prim-obj': referenceOf(objectWithPrimitives, registry),
+  'nullable-prim-obj': referenceOf(objectWithNullablePrimitives, registry),
   'arr-obj': referenceOf(objectWithArrays, registry),
   'nested-obj': referenceOf(objectWithNestedObjects, registry),
 }

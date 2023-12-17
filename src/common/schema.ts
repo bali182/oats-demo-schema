@@ -1,58 +1,55 @@
-import {
-  Referenceable,
-  ReferenceObject,
-  SchemaObject,
-} from "@oats-ts/json-schema-model";
-import { entries } from "lodash";
+import { Referenceable, ReferenceObject, SchemaObject } from '@oats-ts/json-schema-model'
+import { entries } from 'lodash'
 
 export const numberSchema: SchemaObject = {
-  type: "number",
-};
+  type: 'number',
+}
 
 export const stringSchema: SchemaObject = {
-  type: "string",
-};
+  type: 'string',
+}
 
 export const literalSchema: SchemaObject = {
-  type: "string",
-  const: "Literal Value",
-};
+  type: 'string',
+  const: 'Literal Value',
+}
 
 export const booleanSchema: SchemaObject = {
-  type: "boolean",
-};
+  type: 'boolean',
+}
 
 export const enumSchema: SchemaObject = {
-  type: "string",
-  enum: ["A", "B", "C"],
-};
+  type: 'string',
+  enum: ['A', 'B', 'C'],
+}
 
 export function arraySchema(items: Referenceable<SchemaObject>): SchemaObject {
   return {
-    type: "array",
+    type: 'array',
     items,
-  };
+  }
 }
 
-export function tupleSchema(
-  minItems: number,
-  ...items: Referenceable<SchemaObject>[]
-): SchemaObject {
+export function nullable(schema: SchemaObject): SchemaObject & { nullable: boolean } {
   return {
-    type: "array",
+    ...schema,
+    nullable: true,
+  }
+}
+
+export function tupleSchema(minItems: number, ...items: Referenceable<SchemaObject>[]): SchemaObject {
+  return {
+    type: 'array',
     prefixItems: items,
     minItems,
-  };
+  }
 }
 
-export function referenceOf(
-  schema: SchemaObject,
-  registry: Record<string, () => SchemaObject>
-): ReferenceObject {
+export function referenceOf(schema: SchemaObject, registry: Record<string, () => SchemaObject>): ReferenceObject {
   for (const [name, provider] of entries(registry)) {
     if (provider() === schema) {
-      return { $ref: `#/components/schemas/${name}` };
+      return { $ref: `#/components/schemas/${name}` }
     }
   }
-  throw new TypeError(`Non-referenceable schema ${schema}`);
+  throw new TypeError(`Non-referenceable schema ${schema}`)
 }

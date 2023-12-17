@@ -122,6 +122,34 @@
           }
         }
       },
+      "ObjectWithNullablePrimitives": {
+        "type": "object",
+        "required": [
+          "nullableBool",
+          "nullableNum",
+          "nullableStr",
+          "nullableLit"
+        ],
+        "properties": {
+          "nullableLit": {
+            "type": "string",
+            "const": "Literal Value",
+            "nullable": true
+          },
+          "nullableStr": {
+            "type": "string",
+            "nullable": true
+          },
+          "nullableNum": {
+            "type": "number",
+            "nullable": true
+          },
+          "nullableBool": {
+            "type": "boolean",
+            "nullable": true
+          }
+        }
+      },
       "ObjectWithNestedObjects": {
         "type": "object",
         "required": [
@@ -134,6 +162,9 @@
           },
           "arrObj": {
             "$ref": "#/components/schemas/ObjectWithArrays"
+          },
+          "nullablePrimObj": {
+            "$ref": "#/components/schemas/ObjectWithNullablePrimitives"
           }
         }
       }
@@ -588,6 +619,43 @@
               "application/yaml": {
                 "schema": {
                   "$ref": "#/components/schemas/ObjectWithPrimitives"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/nullable-prim-obj": {
+      "post": {
+        "operationId": "nullablePrimObj",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ObjectWithNullablePrimitives"
+              }
+            },
+            "application/yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ObjectWithNullablePrimitives"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Response for content nullable-prim-obj.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectWithNullablePrimitives"
+                }
+              },
+              "application/yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/ObjectWithNullablePrimitives"
                 }
               }
             }
